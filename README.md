@@ -6,6 +6,9 @@ Este proyecto gestiona el inventario de productos, órdenes y proveedores. A con
 
 ### 1. Crear la base de datos
 
+La siguiente imagen muestra el Diagrama Entidad-Relación de la base de datos:
+![Diagrama de Base de Datos](app/database/03_der.png)
+
 Ejecuta el archivo `01_schema.sql` para crear la estructura de la base de datos.
 
 ### 2. Insertar datos de prueba

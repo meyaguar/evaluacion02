@@ -1,0 +1,45 @@
+<div class="row">
+  <div class="col-sm-12">
+    <app-card cardTitle="Lista de Facturas" blockClass="pc-component">
+      <div class="col-md-12 col-xl-8">
+        <h5 class="mb-3">
+          <a href="nuevafactura" class="btn btn-outline-dark">Nuevo Factura</a>
+        </h5>
+        <div class="card tbl-card">
+          <div class="table-responsive">
+            <table class="table table-hover mb-0">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Factura</th>
+                  <th>Cliente</th>
+                  <th class="text-end">Total</th>
+                  <th>Acciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let factura of listafacturas; let i = index;">
+                  <td>{{ i + 1 }}</td>
+                  <td>000{{ factura.idFactura }}</td>
+                  <td>{{ factura.Nombres }}</td>
+                  <td class="text-end">{{ factura.total }}</td>
+                  <td>
+                    <button type="button" class="btn btn-outline-success" (click)="actualizar(factura)">
+                      Actualizar
+                    </button>
+                    <button type="button" class="btn btn-outline-danger" (click)="eliminar(factura.idFactura)">
+                      Eliminar
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </app-card>
+  </div>
+</div>
+<!--
+  LOS COMPONENTES (.TS) ESTAN OBLIGADOS A IMPORTAR LA REFERENCIA PARA QUE SE PUEDA USAR EN EL HTML
+-->
